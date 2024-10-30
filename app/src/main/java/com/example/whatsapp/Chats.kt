@@ -59,7 +59,7 @@ fun ScaffoldExample() {
                         Icon(imageVector = Icons.Filled.MoreVert, contentDescription = "More options")
                     }
                 },
-                scrollBehavior = TopAppBarDefaults.enterAlwaysScrollBehavior()
+                scrollBehavior = TopAppBarDefaults.exitUntilCollapsedScrollBehavior()
             )
         },
         floatingActionButton = {
