@@ -176,8 +176,10 @@ class MainActivity : ComponentActivity() {
                 Scaffold(
                     bottomBar = { NavBar(navController) }
                 ) { innerPadding ->
-                    NavHost(navController = navController, startDestination = "chats", Modifier.padding(innerPadding)
-                        .consumeWindowInsets(innerPadding),) {
+                    NavHost(navController = navController, startDestination = "chats",
+                        Modifier
+                            .padding(innerPadding)
+                            .consumeWindowInsets(innerPadding),) {
                         composable("chats") { ChatsScreen() }
                         composable("updates") { UpdatesScreen() }
                         composable("communities") { CommunitiesScreen() }
@@ -248,5 +250,7 @@ fun CommunitiesScreen() {
 
 @Composable
 fun CallsScreen() {
-    Text(text = "Calls Screen", fontWeight = FontWeight.Bold)
+    callLog()
+
+
 }
